@@ -4,7 +4,7 @@ const {isLoggedIn}= require('../lib/auth');
 const pool=require('../views/database');
 
 router.get('/add',isLoggedIn, (req, res) => {
-    res.render('links/add');
+    res.render('rooms/add');
 
 });
 //recibir datos formulario
@@ -29,10 +29,10 @@ router.post('/add',isLoggedIn, async (req, res) => {
         if(exists.length > 0){ //si ya esta creada y eres assitente solo introduces una linia en la aux si
             await pool.query('INSERT INTO participants set ?',[newRoomP]);
             req.flash('success', 'Link saved successfully');
-            res.redirect('/links');
+            res.redirect('/rooms');
         }else{                  //si no esta creada y eres assitente no se introduce, puedes haverte equivocado en el ID
             req.flash('message', 'La classe no existe o bien el ID no es correcto!');
-            res.redirect('/links/add');
+            res.redirect('/rooms/add');
         }
     }
     else
@@ -40,7 +40,7 @@ router.post('/add',isLoggedIn, async (req, res) => {
     await pool.query('INSERT INTO rooms set ?', [newRoom]);
     await pool.query('INSERT INTO participants set ?',[newRoomP]);
     req.flash('success', 'Link saved successfully');
-    res.redirect('/links');
+    res.redirect('/rooms');
     
     }
     
@@ -50,7 +50,7 @@ router.get('/',isLoggedIn, async (req, res) => {
     const links= await pool.query('SELECT * FROM participants WHERE user_id= ?' , [req.user.id]);
     //console.log(links);
     
-    res.render('links/list', { links } );
+    res.render('rooms/list', { links } );
 
 });
 //delete
@@ -67,7 +67,7 @@ router.get('/delete/:room_id', isLoggedIn, async (req, res) => {
         await pool.query('DELETE FROM participants WHERE room_id = ? ', [room_id]);
     }
     req.flash('success', 'class deleted successfully');
-    res.redirect('/links' );
+    res.redirect('/rooms' );
 
 });
 //edit: mostrar datos actuales
@@ -75,7 +75,7 @@ router.get('/edit/:id', isLoggedIn, async (req, res) => {
     const {id} =req.params;
     const links= await pool.query('SELECT * FROM rooms WHERE id= ?', [id]);
     
-    res.render('links/edit', { link: links[0] } );
+    res.render('rooms/edit', { link: links[0] } );
 
 
 });
@@ -97,7 +97,7 @@ router.post('/edit/:id', isLoggedIn, async (req, res) => {
     //await pool.query('INSERT INTO participants set ?', [newRoom.room_id, req.user.id]);
     await pool.query('INSERT INTO participants (room_id, user_id, rol) VALUES ("1000", "3", "master")');
     req.flash('success', 'Link edited successfully');
-    res.redirect('/links');
+    res.redirect('/rooms');
 });
 
 module.exports = router;
