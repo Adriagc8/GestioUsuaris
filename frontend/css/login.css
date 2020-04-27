@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+a,
+button {
+  text-decoration: none;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+.main {
+  height: 100%;
+  display: flex;
+}
+.left {
+  flex: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right {
+  flex: 30%;
+  background: url("../imatges/people/lutherking.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*-----------------------------------
+        LOG IN CONTAINER
+-----------------------------------*/
+.login-cont {
+  width: 65%;
+  height: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.sign-ok {
+  flex: 65%;
+  display: flex;
+  flex-direction: column;
+}
+.sign-nok {
+  flex: 35%;
+  background: url("../imatges/background/gradients/3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px 30px 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+#correo,
+#pw,
+.enter-cont,
+#forgot-pw,
+.sign-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----------SIGN IN TITLE------------*/
+.sign-title {
+  margin-top: 10%;
+  font-size: 30px;
+  color: #0f70d7;
+}
+/*--------------Mail + PW-------------*/
+#correo,
+#pw {
+  margin-top: 5%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #505f75;
+  text-transform: uppercase;
+}
+#correo > input,
+#pw > input {
+  width: 50%;
+  margin-top: 0%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+  text-align: center;
+}
+/*-----------TOOGLE--------------*/
+.toogle-cont {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.toggler {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.toggler--is-active {
+  color: #0f70d7;
+}
+
+#switcher {
+  display: none;
+}
+.b {
+  display: block;
+  margin-top: 4px;
+  border-radius: 30px;
+  width: 50%;
+  height: 80%;
+  background-color: white;
+}
+.b-init{
+  margin-left: 4px;
+}
+.b-right{
+  transition: margin-left 1s;
+  margin-left: 66px;
+}
+.b-left{
+  transition: margin-left 1s;
+  margin-left: 4px;
+}
+.toggle {
+  cursor: pointer;
+  margin: 0px 20px 0px 20px;
+  width: 140px;
+  height: 40px;
+  border-radius: 100px;
+  background: url("../imatges/background/gradients/3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+/*----------BTN-----------------*/
+#enter {
+  cursor: pointer;
+  margin-top: 5%;
+  background: url("../imatges/background/gradients/3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 160px;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 30px;
+}
+#enter:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+#enter > span {
+  color: white;
+}
+
+/*---------FORGOT PW------------*/
+#forgot-pw {
+  margin-top: 5%;
+  color: #0c0101;
+  cursor: pointer;
+}
+#forgot-pw:hover {
+  color: #0f70d7;
+}
+
+/*----------SOCIAL MEDIA---------*/
+.social-media {
+  margin-top: 5%;
+  height: 15%;
+  width: 100%;
+}
+
+.social-media ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-media ul li {
+  cursor: pointer;
+  margin: 25px 25px;
+}
+.social-media img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-media img:hover{
+  transform: scale(1.3);
+}
+
+
+/*----------------------------------
+        RIGHT SIDE
+----------------------------------*/
+.up-main{
+  margin-top: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.up-main > span{
+  font-size: 30px;
+  color:white;
+}
+
+div.up-sub{
+  color: white;
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+div.up-sub > span{
+  font-size: 20px;
+}
+
+.up-btn-cont{
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.up-btn{
+  text-align: center;
+  width: 150px;
+  border: 3px solid white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  color:white;
+  cursor: pointer;
+}
+
+.up-btn:hover{
+  background-color: white;
+  color: #0f70d7;
+  transform: scale(1.02);
+}

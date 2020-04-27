@@ -1,0 +1,394 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body, html{
+    height: 100%;
+}
+
+a{
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+/*-------------------------------------------
+                    HEADER
+-------------------------------------------*/
+.header{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+/*------------------------------------------
+                    LEFT
+------------------------------------------*/
+
+.left{
+    margin-top: 20px;
+    flex:33.33333%;
+    display: flex;
+    align-items: center;
+}
+/*-------------x3 BARRA--------------------*/
+.btn-menu{
+    font-size: 30px;
+    margin-left: 10%;
+}
+.btn-menu > a{
+    display: block;
+    padding: 10px 30px;
+    font-size:30px;
+    color:#0f70d7;
+}
+a, button{
+    text-decoration: none;
+}
+a:-webkit-any-link{
+    text-decoration: none;
+}
+/*---------ON-CLICK LEFT MENU--------------*/
+.nav{
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background:url("../imatges/background/gradients/1.jpeg");
+    height: 100%;
+    width: 20%;
+    display: none;
+    padding-top: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#x-lynk{
+    margin-left: 80%;
+    font-size: 30px;
+    color:white;
+}
+.nav > #menu-lynk{
+    font-size: 200%;
+    text-decoration: none;
+    color:white;
+    width: 100%;
+    padding-bottom: 10%;
+    display: flex;
+    align-items: center;
+}
+#menu-lynk:hover{
+    background-color: white;
+    color:#222045;
+}
+#menu-lynk > span{
+    margin-top: 30px;
+    margin-left: 15%;
+}
+
+.free-trial > span{
+   font-weight: 600;
+}
+
+/*---------------------------------
+            CENTER
+----------------------------------*/
+.center{
+    margin-top: 20px;
+    flex:33.3333333%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.img-cont{
+    margin-top: 10px;
+    width: 200px;
+}
+.img-cont > img{
+    width: 100%;
+}
+
+/*---------------------------------
+                RIGHT
+-----------------------------------*/
+.right{
+    margin-top: 20px;
+    flex:33.333333333%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn-go-to{
+    width: 180px;
+    margin-right: 15%;
+    background: url("../imatges/background/gradients/3.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 4px;
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.btn-go-to > span{
+   font-size: 17px;
+   padding: 6px 21px;
+   border-radius: 25px;
+   color:white;
+}
+.btn-go-to:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+
+
+/*--------------------------------
+            MAIN
+--------------------------------*/
+.main{
+    height: 90%;
+    display: flex;
+}
+/*------LEFT SIDE -----------------*/
+.main-left{
+    margin-top: 5%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-left-title{
+    height: 100px;
+    width: 100%;
+    color: #0f70d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-left-title > span{
+    font-size: 40px;
+}
+
+.main-left-subtitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-left-subtitle > span{
+    font-size: 20px;
+}
+
+.main-left-btn{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.btn-free{
+    width: 180px;
+    background: url("../imatges/background/gradients/3.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0px;
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    color: white;
+}
+.btn-free > span{
+    font-size: 17px;
+}
+
+.relleno{
+    height: 30%;
+}
+/*-----RIGHT SIDE------------------*/
+.main-rigth{
+    width: 40%;
+    display: flex;
+}
+.main-img-cont{
+    margin-left: 4%;
+    margin-top: 23%;
+    width: 60%;
+    height: 60%;
+    background-color: white;
+}
+
+.main-img-cont > img{
+    width: 100%;
+}
+
+
+/*----------------------------------
+            WHITEBOARD
+----------------------------------*/
+.whiteboard{
+    height: 80%;
+    display: flex;
+    width: 100%;
+}
+.left-whiteboard{
+    flex:50%;
+    display: flex;
+    justify-content: center;
+}
+.right-whiteboard{
+    flex:50%;
+    display: flex;
+    flex-direction: column;
+}
+.ex-cont{
+    margin-left: 10%;
+    width: 90%;
+}
+.ex-cont > img{
+    width: 100%;
+}
+
+.whiteboard-main-txt{
+    margin-top: 20%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    color: #0f70d7;
+}
+.whiteboard-sub-txt{
+    margin-top: 30px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+.whiteboard-btn-cont{
+    margin-top: 5%;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whiteboard-btn{
+    padding: 15px 20px;
+    width: 170px;
+    background:url("../imatges/background/gradients/3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border-radius: 25px;
+    color:white;
+}
+
+/*-----------------------------------
+            SECOND
+-----------------------------------*/
+.second{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.second-title{
+    width: 100%;
+    display: flex;
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+}
+.title-features{
+    width: 60%;
+    height: 100px;
+    color:#0f70d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    font-weight: 800;
+}
+
+.second-cont{
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+}
+.left-relleno{
+    flex:15%;
+}
+.icon-container{
+    flex: 70%;
+    display: flex;
+}
+
+.icon-cont{
+    flex:33.333333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    border-radius: 50%;
+    border: 6px solid white;
+    width: 63%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    background:url("../imatges/background/gradients/3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card:hover{
+    transform: scale(1.03);
+}
+.fa-lock{
+    color:white;
+    font-size: 100px;
+}
+.fa-users{
+    color:white;
+    font-size: 100px;
+}
+.fa-wifi{
+    color:white;
+    font-size: 100px;
+}
+
+.img-icon{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-txt{
+    margin-left:10% ;
+    color: white;
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.right-relleno{
+    flex:15%;
+}
